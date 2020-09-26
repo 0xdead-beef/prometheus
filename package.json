@@ -1,0 +1,23 @@
+{
+  "name": "prometheus",
+  "version": "1.0.0",
+  "description": "discord friend bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xdead-beef/prometheus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xdead-beef/prometheus/issues"
+  },
+  "homepage": "https://github.com/0xdead-beef/prometheus#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
+  }
+}
