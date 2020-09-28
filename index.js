@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const classes = require('./json/classes.json')
+const classes = require('./json/classes.json');
 
 client.on('message', message => {
     const text = message.content;
@@ -15,7 +15,11 @@ client.on('message', message => {
             message.channel.send('please use this in a class channel to access the respective syllabus!');
         }
     } else if (args[1] === '.setsyllabus' && args[2]) {
-        message.channel.send(args[2]);
+        const channel = message.channel.name;
+        if (classes[channel]) {
+            classes[channel].syllabus = args[2];
+            message.channel.send('updated syllabus');
+        }
     }
 });
 
