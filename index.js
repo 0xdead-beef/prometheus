@@ -4,13 +4,18 @@ const client = new Discord.Client();
 const classes = require('./json/classes.json')
 
 client.on('message', message => {
-    if (message.content === '.syllabus') {
+    const text = message.content;
+    let args = /^([^ ]+)(?: +(.+)$)?/.exec(text);
+
+    if (text === '.syllabus') {
         const channel = message.channel.name;
         if (classes[channel] && classes[channel].syllabus) {
             message.channel.send(classes[channel].syllabus);
         } else {
             message.channel.send('please use this in a class channel to access the respective syllabus!');
         }
+    } else if (args[1] === '.setsyllabus' && args[2]) {
+        message.channel.send(args[2]);
     }
 });
 
