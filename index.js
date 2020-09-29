@@ -2,8 +2,9 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const classes = require('./json/classes.json');
+const fs = require('fs').promises;
 
-client.on('message', message => {
+client.on('message', async message => {
     const text = message.content;
     let args = /^([^ ]+)(?: +(.+)$)?/.exec(text);
 
@@ -19,12 +20,15 @@ client.on('message', message => {
         if (classes[channel]) {
             classes[channel].syllabus = args[2];
             message.channel.send('updated syllabus');
+        } else {
+            classes[channel] = {syllabus: args[2]};
+            message.channel.send('added syllabus');
         }
-    }
+        await fs.writeFile('./json/classes.json', JSON.stringify(classes), 'utf8');
+    } else if (text === '.time') {
         let d = new Date();
-        if (text === '.time'){
-	message.channel.send('the time is '+d.toString());
-}
+        message.channel.send('the time is '+d.toString());
+    }
 });
 
 client.once('ready', () => {
