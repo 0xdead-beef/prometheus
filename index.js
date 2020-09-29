@@ -21,6 +21,10 @@ client.on('message', message => {
             message.channel.send('updated syllabus');
         }
     }
+        let d = new Date();
+        if (text === '.time'){
+	message.channel.send('the time is '+d.toString());
+}
 });
 
 client.once('ready', () => {
