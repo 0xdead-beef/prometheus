@@ -33,7 +33,8 @@ client.on('message', async message => {
         x = Math.floor(Math.random() * 2);
         if (x == 0) {
             message.channel.send('heads');
-        else
+        }
+        else {
             message.channel.send('tails');
         }
     }
