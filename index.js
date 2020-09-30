@@ -29,9 +29,8 @@ client.on('message', async message => {
         let d = new Date();
         message.channel.send('the time is '+d.toString());
     } else if (text === '.coinflip') {
-        let x = 0;
-        x = Math.floor(Math.random() * 2);
-        if (x == 0) {
+        const x = (Math.floor(Math.random() * 2) == 0);
+        if (x) {
             message.channel.send('heads');
         }
         else {
