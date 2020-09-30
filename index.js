@@ -28,6 +28,14 @@ client.on('message', async message => {
     } else if (text === '.time') {
         let d = new Date();
         message.channel.send('the time is '+d.toString());
+    } else if (text === '.coinflip') {
+        let x = 0;
+        x = Math.floor(Math.random() * 2);
+        if (x == 0) {
+            message.channel.send('heads');
+        else
+            message.channel.send('tails');
+        }
     }
 });
 
