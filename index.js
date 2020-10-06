@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const classes = require('./json/classes.json');
 const fs = require('fs').promises;
 const calendar = require('./calendar/calendar.js');
+const articles = require('./json/articles.json');
 
 client.on('message', async message => {
     const text = message.content;
@@ -39,6 +40,13 @@ client.on('message', async message => {
         }
     } else if (text === '.assignments') {
         calendar.assignments(message);
+    } else if (text === '.articles') {
+        const channel = message.channel.name;
+        if (articles[channel] && articles[channel].articles) {
+            message.channel.send(articles[channel].articles);
+          } else {
+                message.channel.send('please use this in a class channel to access the respective articles!')
+            }
     }
 });
 
