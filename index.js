@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const classes = require('./json/classes.json');
 const fs = require('fs').promises;
+const calendar = require('./calendar/calendar.js');
 
 client.on('message', async message => {
     const text = message.content;
@@ -36,6 +37,8 @@ client.on('message', async message => {
         else {
             message.channel.send('tails');
         }
+    } else if (text === '.assignments') {
+        calendar.assignments(message);
     }
 });
 
