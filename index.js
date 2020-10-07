@@ -47,6 +47,8 @@ client.on('message', async message => {
           } else {
                 message.channel.send('please use this in a class channel to access the respective articles!')
             }
+    } else if (text === '.help') {
+        message.channel.send("hi there! I'm prometheus, the friendly neighborhood bot! here are some of my functions:\n.articles: links to a document containing all article links, separated by sessions, for each class in its respective channel\n.assignments: lists assignments in each class channel upcoming for the week\n.syllabus: links to a document with the syllabus for each respective class");
     }
 });
 
