@@ -8,6 +8,9 @@ const classinfo = require('./classinfo.js');
 client.on('message', async message => {
     const text = message.content;
     let args = /^([^ ]+)(?: +(.+)$)?/.exec(text);
+    if (!args) {
+        return; // ??? wtf
+    }
 
     if (text === '.syllabus') {
         classinfo.getClassInfo(message.channel, 'syllabus');
