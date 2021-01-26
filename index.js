@@ -40,6 +40,13 @@ client.on('message', async message => {
         }
     } else if (text === '.assignments') {
         calendar.assignments(message);
+     } else if (text === '.zoom') {
+        const channel = message.channel.name;
+        if (zoom[channel] && zoom[channel].zoom) {
+            message.channel.send(zoom[channel].zoom);
+        } else {
+            message.channel.send('you can use discord for video calls!')
+        }
     } else if (text === '.articles') {
         const channel = message.channel.name;
         if (articles[channel] && articles[channel].articles) {
