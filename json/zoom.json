@@ -1,14 +1,17 @@
 {
     "socw411": {
-        "zoom": "https://uic.zoom.us/j/83113575076?pwd=L1Jpb1dJbmREeXJZOGFWR084SHFpUT09"
+        "zoom": "https://uic.zoom.us/j/83113575076?pwd=L1Jpb1dJbmREeXJZOGFWR084SHFpUT09\nMeeting ID: 831 1357 5076\nPasscode: spring411\nDial by location: +1 312 626 6799\nMobile Passcode: 562521552"
     },
     "socw431": {
-        "zoom": "https://uic.zoom.us/j/84828681122?pwd=TWFCWXJPMGhjeVZsc3l1QnVobzNvUT09"
+        "zoom": "https://uic.zoom.us/j/84828681122?pwd=TWFCWXJPMGhjeVZsc3l1QnVobzNvUT09\nMeeting ID: 848 2868 1122\nPasscode: 0a947w32\nDial by location: +1 312 626 6799\nMobile Passcode: 36643413"
     },
     "socw460": {
-        "zoom": "https://uic.zoom.us/j/84935866528?pwd=Y0hVTitONG13NnRlYjZJNk9UYVVHdz09"
+        "zoom": "https://uic.zoom.us/j/84935866528?pwd=Y0hVTitONG13NnRlYjZJNk9UYVVHdz09\nMeeting ID: 849 3586 6528\nPasscode: socw2021\nDial by location: +1 312 626 6799 US\nMobile Passcode: 47250910"
     },
     "social": {
+        "zoom": "why not use discord's call/video feature instead? :)"
+    },
+    "general": {
         "zoom": "why not use discord's call/video feature instead? :)"
     }
 }
